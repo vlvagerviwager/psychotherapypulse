@@ -278,6 +278,37 @@
             outline-offset: 2px;
         }
 
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+                color: #e0e0e0;
+            }
+
+            section {
+                background: #2a2a2a;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            section h2 {
+                color: #6ec6cc;
+            }
+
+            section p {
+                color: #b0b0b0;
+            }
+
+            footer {
+                background: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            .link-button:focus {
+                outline: 3px solid #FF9900;
+                outline-offset: 2px;
+            }
+        }
+
         /* Print styles */
         @media print {
             body {
