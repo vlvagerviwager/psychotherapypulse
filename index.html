@@ -371,24 +371,26 @@
 
     <main id="main-content">
         <div class="container">
-            <section>
-                <h2>About</h2>
+            <section aria-labelledby="about-heading">
+                <h2 id="about-heading">About</h2>
                 <p>Psychotherapy Pulse is an international newsletter that curates psychotherapy research, innovations, and developments from around the world in one convenient source. It saves mental health professionals time by eliminating the need to subscribe to multiple regional newsletters and forums to stay current with international advances in the field.</p>
             </section>
 
-            <section>
-                <h2>Connect with Us</h2>
-                <div class="links-section">
-                    <a href="https://eepurl.com/jkB6jk" class="link-button btn-subscribe" target="_blank" rel="noopener noreferrer">Subscribe to Psychotherapy Pulse</a>
-                    <a href="https://us2.campaign-archive.com/home/?u=7e185c9c44db5eb0773a74173&id=8d60c068bb" class="link-button btn-archives" target="_blank" rel="noopener noreferrer">Browse Past Newsletters</a>
-                    <a href="https://buymeacoffee.com/psychotherapypulse" class="link-button btn-support" target="_blank" rel="noopener noreferrer">Support Our Work</a>
-                    <a href="https://www.instagram.com/psychotherapypulse" class="link-button btn-instagram" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
-                </div>
+            <section aria-labelledby="connect-heading">
+                <h2 id="connect-heading">Connect with Us</h2>
+                <nav aria-label="Social links">
+                    <div class="links-section">
+                        <a href="https://eepurl.com/jkB6jk" class="link-button btn-subscribe" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Psychotherapy Pulse newsletter">Subscribe to Psychotherapy Pulse</a>
+                        <a href="https://us2.campaign-archive.com/home/?u=7e185c9c44db5eb0773a74173&id=8d60c068bb" class="link-button btn-archives" target="_blank" rel="noopener noreferrer" aria-label="Browse past newsletters in archive">Browse Past Newsletters</a>
+                        <a href="https://buymeacoffee.com/psychotherapypulse" class="link-button btn-support" target="_blank" rel="noopener noreferrer" aria-label="Support our work on Buy Me a Coffee">Support Our Work</a>
+                        <a href="https://www.instagram.com/psychotherapypulse" class="link-button btn-instagram" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">Follow on Instagram</a>
+                    </div>
+                </nav>
             </section>
         </div>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; Psychotherapy Pulse. <span id="year"></span>. All rights reserved. Reproduction, scraping, crawling, or use of this content to train artificial intelligence or machine learning models is strictly prohibited without prior written permission from the author.</p>
     </footer>
 
