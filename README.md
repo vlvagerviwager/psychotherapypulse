@@ -3,9 +3,5 @@
 ## How to run
 
 ```bash
-npm install -g http-server
-```
-
-```bash
-http-server
+npm install -g http-server && http-server
 ```
