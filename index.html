@@ -145,7 +145,7 @@
 
         .btn-subscribe {
             background: linear-gradient(135deg, #FF9900 0%, #D4AF37 100%);
-            color: white;
+            color: #1a1a1a;
         }
 
         .btn-subscribe:hover {
@@ -155,7 +155,7 @@
 
         .btn-archives {
             background: linear-gradient(135deg, #7BA984 0%, #4DAAAA 100%);
-            color: white;
+            color: #1a1a1a;
         }
 
         .btn-archives:hover {
@@ -165,7 +165,7 @@
 
         .btn-support {
             background: linear-gradient(135deg, #D4AF37 0%, #FF9900 100%);
-            color: white;
+            color: #1a1a1a;
         }
 
         .btn-support:hover {
@@ -175,7 +175,7 @@
 
         .btn-instagram {
             background: linear-gradient(135deg, #7BA984 0%, #4DAAAA 100%);
-            color: white;
+            color: #1a1a1a;
         }
 
         .btn-instagram:hover {
@@ -273,6 +273,22 @@
         }
 
         /* Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #4DAAAA;
+            color: white;
+            padding: 8px 16px;
+            z-index: 100;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
         .link-button:focus {
             outline: 3px solid #FF9900;
             outline-offset: 2px;
@@ -303,9 +319,28 @@
                 color: #e0e0e0;
             }
 
+            .link-button {
+                color: #ffffff;
+            }
+
             .link-button:focus {
                 outline: 3px solid #FF9900;
                 outline-offset: 2px;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .link-button {
+                transition: none;
+            }
+
+            .link-button:hover {
+                transform: none;
             }
         }
 
@@ -329,11 +364,12 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <img src="logo.png" alt="Psychotherapy Pulse Logo" class="logo" loading="lazy">
     </header>
 
-    <main>
+    <main id="main-content">
         <div class="container">
             <section>
                 <h2>About</h2>
