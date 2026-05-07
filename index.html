@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Psychotherapy Pulse - An international newsletter curating psychotherapy research, innovations, and developments from around the world.">
+    <meta name="description" content="Psychotherapy Pulse is an international newsletter for psychotherapists, Counsellors, psychologists, mental health professionals, and students. Stay current with psychotherapy research and clinical developments.">
     <meta name="keywords" content="psychotherapy, mental health, counselling, counselling psychology, psychotherapy research, clinical psychology, psychologist, psychotherapist, therapist, mental health professional, clinical practice, professional development, continuing education, mental health newsletter, international psychotherapy, therapy practice">
     <meta name="author" content="Psychotherapy Pulse">
     <meta name="robots" content="index, follow">
@@ -14,19 +14,22 @@
     <link rel="alternate" hreflang="en-GB" href="https://psychotherapypulse.online/">
     <link rel="alternate" hreflang="en" href="https://psychotherapypulse.online/">
     <link rel="alternate" hreflang="x-default" href="https://psychotherapypulse.online/">
+    <link rel="sitemap" type="application/xml" href="https://psychotherapypulse.online/sitemap.xml">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://psychotherapypulse.online/">
     <meta property="og:title" content="Psychotherapy Pulse - International Psychotherapy Newsletter">
-    <meta property="og:description" content="An international newsletter that curates psychotherapy research, innovations, and developments from around the world.">
+    <meta property="og:description" content="Psychotherapy Pulse is an international newsletter for psychotherapists, Counsellors, psychologists, mental health professionals, and students.">
     <meta property="og:image" content="https://psychotherapypulse.online/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://psychotherapypulse.online/">
     <meta property="twitter:title" content="Psychotherapy Pulse - International Psychotherapy Newsletter">
-    <meta property="twitter:description" content="An international newsletter that curates psychotherapy research, innovations, and developments from around the world.">
+    <meta property="twitter:description" content="Psychotherapy Pulse is an international newsletter for psychotherapists, Counsellors, psychologists, mental health professionals, and students.">
     <meta property="twitter:image" content="https://psychotherapypulse.online/logo.png">
     
     <!-- Structured Data for SEO -->
@@ -58,7 +61,7 @@
             {
                 "@type": "Newsletter",
                 "name": "Psychotherapy Pulse",
-                "description": "An international newsletter that curates psychotherapy research, innovations, and clinical developments for psychotherapists, counsellor, counselors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians.",
+                "description": "An international newsletter that curates psychotherapy research, innovations, and clinical developments for psychotherapists, Counsellors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians.",
                 "url": "https://psychotherapypulse.online/",
                 "image": "https://psychotherapypulse.online/logo.png",
                 "publisher": {
@@ -71,7 +74,7 @@
                 "@type": "WebPage",
                 "name": "Psychotherapy Pulse Newsletter",
                 "url": "https://psychotherapypulse.online/",
-                "description": "International newsletter for psychotherapists, counselling professionals, and psychology students.",
+                "description": "International newsletter for psychotherapists, Counsellors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, and psychoanalysts.",
                 "primaryImage": "https://psychotherapypulse.online/logo.png",
                 "specialty": {
                     "@type": "MedicalSpecialty",
@@ -104,14 +107,22 @@
     
     <title>Psychotherapy Pulse - International Psychotherapy Newsletter</title>
     
-    <link rel="preconnect" href="https://psychotherapypulse.online/">
-    <link rel="dns-prefetch" href="https://psychotherapypulse.online/">
-    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #FF9900;
+            --color-secondary: #D4AF37;
+            --color-tertiary: #7BA984;
+            --color-accent: #4DAAAA;
+            --color-text: #333;
+            --color-text-light: #555;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f9f7f4;
         }
 
         html {
@@ -211,7 +222,7 @@
         }
 
         .btn-subscribe {
-            background: linear-gradient(135deg, #FF9900 0%, #D4AF37 100%);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
             color: #1a1a1a;
         }
 
@@ -221,7 +232,7 @@
         }
 
         .btn-archives {
-            background: linear-gradient(135deg, #7BA984 0%, #4DAAAA 100%);
+            background: linear-gradient(135deg, var(--color-tertiary) 0%, var(--color-accent) 100%);
             color: #1a1a1a;
         }
 
@@ -231,7 +242,7 @@
         }
 
         .btn-support {
-            background: linear-gradient(135deg, #D4AF37 0%, #FF9900 100%);
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
             color: #1a1a1a;
         }
 
@@ -241,7 +252,7 @@
         }
 
         .btn-instagram {
-            background: linear-gradient(135deg, #7BA984 0%, #4DAAAA 100%);
+            background: linear-gradient(135deg, var(--color-tertiary) 0%, var(--color-accent) 100%);
             color: #1a1a1a;
         }
 
@@ -356,6 +367,18 @@
             top: 0;
         }
 
+        header h1 {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         .link-button:focus {
             outline: 3px solid #FF9900;
             outline-offset: 2px;
@@ -433,14 +456,15 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
-        <img src="logo.png" alt="Psychotherapy Pulse Logo" class="logo" loading="lazy">
+        <h1>Psychotherapy Pulse</h1>
+        <img src="logo.png" alt="Psychotherapy Pulse Logo" class="logo">
     </header>
 
     <main id="main-content">
         <div class="container">
             <section aria-labelledby="about-heading">
                 <h2 id="about-heading">About</h2>
-                <p>Psychotherapy Pulse is an international newsletter that curates psychotherapy research, innovations, and clinical developments from around the world for psychotherapists, counsellor, counselors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians. It saves therapists and clinicians time by eliminating the need to subscribe to multiple regional newsletters and forums to stay current with international advances in counselling and psychotherapy practice.</p>
+                <p>Psychotherapy Pulse is an international newsletter that curates psychotherapy research, innovations, and clinical developments from around the world for psychotherapists, Counsellors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians. It saves therapists and clinicians time by eliminating the need to subscribe to multiple regional newsletters and forums to stay current with international advances in counselling and psychotherapy practice.</p>
             </section>
 
             <section aria-labelledby="connect-heading">
