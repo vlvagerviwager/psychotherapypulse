@@ -188,6 +188,33 @@
             flex: 1;
         }
 
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 16px;
+            background: #333;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .nav-link:hover {
+            background: #4DAAAA;
+        }
+
+        /* Prevent scroll beyond boundaries */
+        html {
+            overscroll-behavior: none;
+        }
+
         /* Container */
         .container {
             max-width: 800px;
@@ -465,9 +492,16 @@
         /* Dark mode */
         @media (prefers-color-scheme: dark) {
             body {
-                background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-                background-attachment: fixed;
+                background: #1a1a1a;
                 color: #e0e0e0;
+            }
+
+            .site-nav {
+                background: #111;
+            }
+
+            .nav-link:hover {
+                background: #4DAAAA;
             }
 
             section {
@@ -531,7 +565,8 @@
 
         /* Print styles */
         @media print {
-            body {
+            html, body {
+                overscroll-behavior: visible;
                 background: white;
             }
 
@@ -549,6 +584,11 @@
     </style>
 </head>
 <body>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#connect" class="nav-link">Connect</a>
+    </nav>
     <header>
         <h1>Psychotherapy Pulse</h1>
         <img src="logo.png" alt="Psychotherapy Pulse Logo" class="logo">
@@ -556,12 +596,12 @@
 
     <main id="main-content">
         <div class="container">
-            <section aria-labelledby="about-heading">
+            <section id="about" aria-labelledby="about-heading">
                 <h2 id="about-heading">About</h2>
                 <p>Psychotherapy Pulse is an international newsletter that curates psychotherapy research, innovations, and clinical developments from around the world for psychotherapists, Counsellors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians. It saves therapists and clinicians time by eliminating the need to subscribe to multiple regional newsletters and forums to stay current with international advances in counselling and psychotherapy practice.</p>
             </section>
 
-            <section aria-labelledby="faq-heading">
+            <section id="faq" aria-labelledby="faq-heading">
                 <h2 id="faq-heading">Frequently Asked Questions</h2>
                 <details>
                     <summary>What is Psychotherapy Pulse?</summary>
@@ -581,7 +621,7 @@
                 </details>
             </section>
 
-            <section aria-labelledby="connect-heading">
+            <section id="connect" aria-labelledby="connect-heading">
                 <h2 id="connect-heading">Connect with Us</h2>
                 <nav aria-label="Social links">
                     <div class="links-section">
