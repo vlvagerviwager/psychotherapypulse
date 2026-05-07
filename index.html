@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychotherapy Pulse - International Psychotherapy Newsletter</title>
     <meta name="description" content="Psychotherapy Pulse is an international newsletter for psychotherapists, Counsellors, psychologists, mental health professionals, and students. Stay current with psychotherapy research and clinical developments.">
     <meta name="keywords" content="psychotherapy, mental health, counselling, counselling psychology, psychotherapy research, clinical psychology, psychologist, psychotherapist, therapist, mental health professional, clinical practice, professional development, continuing education, mental health newsletter, international psychotherapy, therapy practice">
     <meta name="author" content="Psychotherapy Pulse">
@@ -56,7 +57,9 @@
                     { "@type": "Country", "name": "Australia" },
                     { "@type": "Country", "name": "Canada" }
                 ],
-                "inLanguage": "en"
+                "inLanguage": "en",
+                "datePublished": "2026-03-27",
+                "dateModified": "2026-05-07"
             },
             {
                 "@type": "Newsletter",
@@ -100,6 +103,45 @@
                     { "@type": "Audience", "name": "Psychoanalyst" }
                 ],
                 "inLanguage": "en"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is Psychotherapy Pulse?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Psychotherapy Pulse is a free international newsletter that curates the latest psychotherapy research and clinical developments from around the world for mental health professionals and students."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why should I subscribe?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Subscribe to get a monthly email full of curated insights on the latest international psychotherapy research, innovations, and clinical advancements. It's free!"
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is psychotherapy?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Psychotherapy is a collaborative treatment that provides a safe space to talk through mental health challenges with a trained professional. <a href='https://www.linkedin.com/pulse/what-psychotherapy-nikita-z-/'>Learn more about what psychotherapy involves</a>.",
+                            "html": "Psychotherapy is a collaborative treatment that provides a safe space to talk through mental health challenges with a trained professional. <a href='https://www.linkedin.com/pulse/what-psychotherapy-nikita-z-/'>Learn more about what psychotherapy involves</a>."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I see past issues?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes! Browse our complete archive of past newsletters <a href='https://us2.campaign-archive.com/home/?u=7e185c9c44db5eb0773a74173&id=8d60c068bb'>here</a>.",
+                            "html": "Yes! Browse our complete archive of past newsletters <a href='https://us2.campaign-archive.com/home/?u=7e185c9c44db5eb0773a74173&id=8d60c068bb'>here</a>."
+                        }
+                    }
+                ]
             }
         ]
     }
@@ -191,6 +233,56 @@
             font-size: 1.5rem;
             margin-bottom: 20px;
             font-weight: 600;
+        }
+
+        details {
+            margin-bottom: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 16px;
+        }
+
+        details:last-child {
+            border-bottom: none;
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #4DAAAA;
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details p {
+            margin-top: 12px;
+            color: #555;
+        }
+
+        details a {
+            color: #4DAAAA;
+            text-decoration: underline;
+        }
+
+        details a:hover {
+            color: #3d8a8a;
         }
 
         section p {
@@ -405,6 +497,22 @@
                 color: #b0b0b0;
             }
 
+            details {
+                border-bottom-color: #444;
+            }
+
+            details p {
+                color: #b0b0b0;
+            }
+
+            details summary::after {
+                color: #6ec6cc;
+            }
+
+            details a {
+                color: #6ec6cc;
+            }
+
             footer {
                 background: #1a1a1a;
                 color: #e0e0e0;
@@ -466,6 +574,26 @@
             <section aria-labelledby="about-heading">
                 <h2 id="about-heading">About</h2>
                 <p>Psychotherapy Pulse is an international newsletter that curates psychotherapy research, innovations, and clinical developments from around the world for psychotherapists, Counsellors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians. It saves therapists and clinicians time by eliminating the need to subscribe to multiple regional newsletters and forums to stay current with international advances in counselling and psychotherapy practice.</p>
+            </section>
+
+            <section aria-labelledby="faq-heading">
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
+                <details>
+                    <summary>What is Psychotherapy Pulse?</summary>
+                    <p>Psychotherapy Pulse is a free international newsletter that curates the latest psychotherapy research and clinical developments from around the world for mental health professionals and students.</p>
+                </details>
+                <details>
+                    <summary>Why should I subscribe?</summary>
+                    <p>Subscribe to get a monthly email full of curated insights on the latest international psychotherapy research, innovations, and clinical advancements. It's free!</p>
+                </details>
+                <details>
+                    <summary>What is psychotherapy?</summary>
+                    <p>Psychotherapy is a collaborative treatment that provides a safe space to talk through mental health challenges with a trained professional. <a href="https://www.linkedin.com/pulse/what-psychotherapy-nikita-z-/" target="_blank" rel="noopener noreferrer">Learn more about what psychotherapy involves</a>.</p>
+                </details>
+                <details>
+                    <summary>Can I see past issues?</summary>
+                    <p>Yes! Browse our complete archive of past newsletters <a href="https://us2.campaign-archive.com/home/?u=7e185c9c44db5eb0773a74173&id=8d60c068bb" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                </details>
             </section>
 
             <section aria-labelledby="connect-heading">
