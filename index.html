@@ -575,6 +575,145 @@
             }
         }
 
+        /* Contact form */
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        #contact label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #555;
+        }
+
+        #contact input,
+        #contact textarea {
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            background: #fff;
+            color: #333;
+        }
+
+        #contact input:focus,
+        #contact textarea:focus {
+            outline: none;
+            border-color: #4DAAAA;
+            box-shadow: 0 0 0 3px rgba(77, 170, 170, 0.15);
+        }
+
+        #contact textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .char-count {
+            font-size: 0.8rem;
+            color: #666;
+            text-align: right;
+            margin-top: -8px;
+        }
+
+        .char-count.warn {
+            color: #bf360c;
+        }
+
+        .char-count.limit {
+            color: #b71c1c;
+            font-weight: 600;
+        }
+
+        .btn-send {
+            background: linear-gradient(135deg, var(--color-tertiary) 0%, var(--color-accent) 100%);
+            color: #1a1a1a;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .btn-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(123, 169, 132, 0.3);
+        }
+
+        .btn-send:focus {
+            outline: 3px solid #FF9900;
+            outline-offset: 2px;
+        }
+
+        .form-status {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .form-status.visible {
+            display: block;
+        }
+
+        .form-status.success {
+            background: #e8f5e9;
+            color: #1b5e20;
+        }
+
+        .form-status.error {
+            background: #fbe9e7;
+            color: #b71c1c;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            #contact label {
+                color: #b0b0b0;
+            }
+
+            #contact input,
+            #contact textarea {
+                background: #333;
+                border-color: #555;
+                color: #e0e0e0;
+            }
+
+            #contact input:focus,
+            #contact textarea:focus {
+                border-color: #6ec6cc;
+                box-shadow: 0 0 0 3px rgba(110, 198, 204, 0.15);
+            }
+
+            .char-count {
+                color: #aaa;
+            }
+
+            .char-count.warn {
+                color: #ffb74d;
+            }
+
+            .char-count.limit {
+                color: #ef9a9a;
+            }
+
+            .form-status.success {
+                background: #1b3d1b;
+                color: #a5d6a7;
+            }
+
+            .form-status.error {
+                background: #3d1b1b;
+                color: #ef9a9a;
+            }
+        }
+
         /* Print styles */
         @media print {
             html, body {
@@ -602,6 +741,7 @@
         <a href="#faq" class="nav-link" aria-label="Frequently asked questions">FAQ</a>
         <a href="past-newsletters.html" class="nav-link" aria-label="Past newsletters archive">Past Newsletters</a>
         <a href="#connect" class="nav-link" aria-label="Connect with us">Connect</a>
+        <a href="#contact" class="nav-link" aria-label="Contact us">Contact</a>
     </nav>
     <header>
         <h1>Psychotherapy Pulse</h1>
@@ -612,7 +752,7 @@
         <div class="container">
             <section id="about" aria-labelledby="about-heading">
                 <h2 id="about-heading">About</h2>
-                <p>Psychotherapy Pulse is a <strong>free</strong> international newsletter that curates psychotherapy research, innovations, and clinical developments from around the world for psychotherapists, Counsellors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians. It saves therapists and clinicians time by eliminating the need to subscribe to multiple regional newsletters and forums to stay current with international advances in counselling and psychotherapy practice.</p>
+                <p>Psychotherapy Pulse is a <strong>free</strong> international newsletter that curates psychotherapy research, innovations, and clinical developments from around the world for psychotherapists, Counsellors, clinical psychologists, counselling psychologists, psychologists, general practitioners, mental health professionals, psychotherapy students, counselling students, psychology students, researchers, psychoanalysts, and clinicians. Each issue features sections on psychotherapy news, recent research, technology and therapy, challenges in the field, regulatory updates, and resources for learning, CPD, and further education. It saves therapists and clinicians time by eliminating the need to subscribe to multiple regional newsletters and forums to stay current with international advances in counselling and psychotherapy practice.</p>
                 <a href="https://eepurl.com/jkB6jk" class="link-button btn-subscribe" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Psychotherapy Pulse newsletter" style="margin: 30px auto 0; display: table;">Subscribe - It's free!</a>
             </section>
 
@@ -620,11 +760,11 @@
                 <h2 id="faq-heading">Frequently Asked Questions</h2>
                 <details>
                     <summary>What is Psychotherapy Pulse?</summary>
-                    <p>Psychotherapy Pulse is a free international newsletter that curates the latest psychotherapy research and clinical developments from around the world for mental health professionals and students.</p>
+                    <p>Psychotherapy Pulse is a free international newsletter that curates the latest psychotherapy research and clinical developments from around the world for mental health professionals and students. Each issue covers psychotherapy news, recent research, technology and therapy, challenges in the field, regulatory updates, and resources for learning, CPD, and further education.</p>
                 </details>
                 <details>
                     <summary>Why should I subscribe?</summary>
-                    <p>Subscribe to get a monthly email full of curated insights on the latest international psychotherapy research, innovations, and clinical advancements. It's free!</p>
+                    <p>Subscribe to get a monthly email covering psychotherapy news, recent research, technology and therapy, challenges in the field, regulatory updates, and resources for learning, CPD, and further education &mdash; all in one place. It's free!</p>
                 </details>
                 <details>
                     <summary>What is psychotherapy?</summary>
@@ -651,6 +791,24 @@
                     </div>
                 </nav>
             </section>
+
+            <section id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact Us</h2>
+                <form id="contact-form" novalidate>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" maxlength="100" autocomplete="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" maxlength="320" required aria-required="true" autocomplete="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" maxlength="2000" required aria-required="true" aria-describedby="char-count-desc"></textarea>
+                    <div class="char-count" id="char-count-desc"><span id="char-count">0</span> / 2000</div>
+
+                    <button type="submit" class="btn-send">Send Message</button>
+                    <div class="form-status" role="status" aria-live="polite"></div>
+                </form>
+            </section>
         </div>
     </main>
 
@@ -659,8 +817,73 @@
     </footer>
 
     <script>
-        // Dynamically set the current year in the footer
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        function getContactEmail() {
+            var a = "psychotherapypulse", b = "m87qg", c = "simplelogin", d = "com";
+            return a + "." + b + "@" + c + "." + d;
+        }
+
+        function safeText(str) {
+            var d = document.createElement("div");
+            d.textContent = str;
+            return d.textContent.trim();
+        }
+
+        function validateEmail(str) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
+        }
+
+        var form = document.getElementById("contact-form");
+        if (form) {
+            var messageInput = document.getElementById("message");
+            var charCount = document.getElementById("char-count");
+
+            messageInput.addEventListener("input", function() {
+                var len = messageInput.value.length;
+                charCount.textContent = len;
+                var parent = charCount.parentElement;
+                parent.classList.remove("warn", "limit");
+                if (len >= 2000) {
+                    parent.classList.add("limit");
+                } else if (len >= 1800) {
+                    parent.classList.add("warn");
+                }
+            });
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                var name = safeText(document.getElementById("name").value);
+                var email = safeText(document.getElementById("email").value);
+                var message = safeText(messageInput.value);
+                var status = form.querySelector(".form-status");
+
+                var errors = [];
+                if (name.length > 100) errors.push("Name must be under 100 characters.");
+
+                if (!email) errors.push("Email is required.");
+                else if (!validateEmail(email)) errors.push("Please enter a valid email address.");
+                else if (email.length > 320) errors.push("Email must be under 320 characters.");
+
+                if (!message) errors.push("Message is required.");
+                else if (message.length > 2000) errors.push("Message must be under 2000 characters.");
+
+                if (errors.length) {
+                    status.textContent = errors.join(". ") + ".";
+                    status.className = "form-status visible error";
+                    return;
+                }
+
+                var subject = "Message from " + name;
+                var body = "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message;
+                var mailto = "mailto:" + getContactEmail() + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                window.location.href = mailto;
+
+                status.textContent = "Thank you! Your email client should open shortly.";
+                status.className = "form-status visible success";
+                form.reset();
+            });
+        }
     </script>
 </body>
 </html>
